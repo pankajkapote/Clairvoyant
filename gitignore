@@ -1,0 +1,145 @@
+# ============================================
+# CLAIRVOYANT SAAS - GITIGNORE
+# ============================================
+# Never commit these files to Git!
+
+# ============================================
+# ENVIRONMENT VARIABLES (SECRETS)
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# ============================================
+# NODE MODULES & DEPENDENCIES
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================================
+# BUILD OUTPUT
+# ============================================
+.next/
+out/
+build/
+dist/
+
+# ============================================
+# NEXT.JS
+# ============================================
+.next
+.vercel
+
+# ============================================
+# IDE & EDITOR
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.classpath
+*.sublime-workspace
+*.sublime-project
+.prettierrc
+
+# ============================================
+# TESTING
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ============================================
+# OS FILES
+# ============================================
+.DS_Store
+Thumbs.db
+*.log
+*.pid
+*.seed
+
+# ============================================
+# BACKUP FILES
+# ============================================
+*.bak
+*.backup
+*.swp
+*.tmp
+*.old
+
+# ============================================
+# DATABASE
+# ============================================
+*.sql
+!DATABASE_SCHEMA.sql
+database.sqlite
+db.sqlite3
+
+# ============================================
+# UPLOADS & MEDIA
+# ============================================
+/public/uploads/
+/public/media/
+/uploads/
+/media/
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+tmp/
+temp/
+*.temp
+.cache/
+
+# ============================================
+# MACOS
+# ============================================
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ============================================
+# WINDOWS
+# ============================================
+$RECYCLE.BIN/
+ehthumbs.db
+
+# ============================================
+# CREDENTIALS & SECRETS
+# ============================================
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json
+
+# ============================================
+# DO NOT COMMIT THESE!
+# ============================================
+.env.local          ← Database passwords
+.env.*.local        ← API keys
+node_modules/       ← Re-install with npm install
+.next/              ← Build output
+
+# ============================================
+# IMPORTANT FOR SECURITY
+# ============================================
+# If you accidentally commit .env.local:
+# 1. Run: git rm --cached .env.local
+# 2. Add to .gitignore (above)
+# 3. Commit and push
+# 4. ROTATE your database password immediately!
+# 5. Go to Supabase → Settings → Database → Reset password
